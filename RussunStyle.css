@@ -1,0 +1,156 @@
+
+body{
+    font-family: 'Montserrat';
+    background-color: #003030 !important;
+}
+
+.nav-content{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background: transparent;
+    justify-content: space-between;
+    height: 95.82px;
+}
+/* .left{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-items: flex-start;
+    justify-content: space-between;
+}
+
+.right{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-items: flex-end;
+    justify-content: space-between;
+    
+}
+.mid{
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 4;
+
+
+} */
+
+
+.nav-content div a{
+    color: white;
+    transition: 0.5s;
+}
+
+.nav-content div a:hover{
+    color: black;
+    text-decoration: none;
+}
+
+
+.navbar-brand{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+.navbar-brand img{
+    width: 110px;
+}
+
+
+.container-img{
+    background-image: url('asset/image-placeholder.png');
+    width: 100%;
+    height: 100%;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.container-img2{
+    background-image: url('asset/Placehold2.png');
+    width: 100%;
+    height: 100%;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    margin-top: 40px;
+}
+
+
+.container-img .image-row .text-img{
+    color: #FFFFFF;
+    margin-bottom: 70px;
+    margin-left: 70px;
+    
+}
+.container-img2 .image-row .text-img{
+    color: #FFFFFF;
+    margin-bottom: 380px;
+    margin-left: 70px;
+}
+
+
+
+.container{
+    margin-top: 50px;
+}
+
+.container .row img{
+    width: 100%;
+    height: auto;
+}
+
+.text-new p{
+    color: #FFFFFF;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+/* styling kalo udah ada gambar */
+
+.container .row .col-sm-3{
+    height: 500px;
+    border: 1px solid #E1E1DF;
+    
+    
+}
+
+.coba{
+    background-image: url('asset/Placehold2.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+}
+
+.new-arival-container{
+    width: 100%;
+    height: 600px;
+    background-color: #99CB7B;
+    color: #FFFFFF;
+    margin-top: 50px;
+}
+.new-arival-container .image-row .text-img{
+    margin-bottom: 30px;
+}
+
+.d-flex .image-row{
+    margin-bottom: 25px;
+    margin-right: 250px;
+}
+
+/* isi kalo udah bisa API */
+.white{
+    width: 100%;
+    height: 600px;
+}
+
+footer{
+    margin-top: 240px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+
