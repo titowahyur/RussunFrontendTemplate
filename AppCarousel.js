@@ -118,6 +118,26 @@ const text = document.querySelector('.carousel-text-russun');
 
 
 function navleft1(){
+
+    statement[0].classList.add('active');
+    statement[1].classList.remove('active');
+    statement[2].classList.remove('active');
+
+ 
+     // nav1left
+     nav2left.style.display = 'block';
+     nav3left.style.display = 'none';
+     nav1left.style.display = 'block';
+ 
+     // nav2right
+     nav2Right.style.display = 'block';
+     nav1Right.style.display = 'none';
+     nav3Right.style.display = 'block';
+
+     nav2left.classList.add('animation-carousel');
+     nav3Right.classList.add('animation-carousel-right');
+
+
     nav1left.classList.add('carousel-click');
     text.classList.toggle('click-text');
   
@@ -125,10 +145,11 @@ function navleft1(){
     nav1left.addEventListener('animationend' , function(){
         text.classList.remove('click-text');
         nav1left.classList.remove('carousel-click'); 
+
+        nav2left.classList.remove('animation-carousel');
+        nav3Right.classList.remove('animation-carousel-right');
    
-        statement[0].classList.add('active');
-        statement[1].classList.remove('active');
-        statement[2].classList.remove('active');
+      
 
             
         if(img2.classList.contains('active')){
@@ -203,6 +224,11 @@ function navleft1(){
 }
 
 function navleft2(){
+
+    statement[1].classList.add('active');
+    statement[0].classList.remove('active');
+    statement[2].classList.remove('active');
+
     nav2left.classList.add('carousel-click');
     text.classList.add('click-text');
 
@@ -229,71 +255,72 @@ function navleft2(){
         text.classList.remove('click-text');    
     nav3left.classList.remove('animation-carousel');
     nav1Right.classList.remove('animation-carousel-right');
-        statement[1].classList.add('active');
-        statement[0].classList.remove('active');
-        statement[2].classList.remove('active');
+       
         
-if(img2.classList.contains('active')){
-    img1.style.marginLeft = '-100%';
-    // nav1right
-    nav2Right.style.display ='none';
-    nav3Right.style.display ='none';
-    nav1Right.style.display = 'block';
-
-
-    // nav3left
-    nav1left.style.display = 'none';
-    nav2left.style.display = 'none';
-    nav3left.style.display = 'block';
-
-    index1.style.display = 'flex';
-    index2.style.display = 'none';
-    circle1.style.display = 'none';
-    circle2.style.display = 'flex';
-    circle3.style.display = 'none';
+    if(img2.classList.contains('active')){
+        img1.style.marginLeft = '-100%';
+        // nav1right
+        nav2Right.style.display ='none';
+        nav3Right.style.display ='none';
+        nav1Right.style.display = 'block';
     
-}
-if(img3.classList.contains('active')){
     
-    img1.style.marginLeft = '-200%';
+        // nav3left
+        nav1left.style.display = 'none';
+        nav2left.style.display = 'none';
+        nav3left.style.display = 'block';
     
-    // nav1left
-    nav2left.style.display = 'none';
-    nav3left.style.display = 'none';
-    nav1left.style.display = 'block';
-
-    // nav2right
-    nav2Right.style.display = 'block';
-    nav1Right.style.display = 'none';
-    nav3Right.style.display = 'none';
-
-    index1.style.display = 'none';
-    index2.style.display = 'flex';
-    circle1.style.display = 'none';
-    circle2.style.display = 'none';
-    circle3.style.display = 'flex';
-}
-if(img1.classList.contains('active')){
-  
-    img1.style.marginLeft = "0";
-
-    // nav2left
-    nav2left.style.display = 'block';
-    nav1left.style.display = 'none';
-    nav3left.style.display = 'none';
-
-    // nav3right
-    nav3Right.style.display = 'block';
-    nav2Right.style.display ='none';
-    nav1Right.style.display ='none';
-
-    index1.style.display = 'flex';
-    index2.style.display = 'none';
-    circle1.style.display = 'flex';
-    circle2.style.display = 'none';
-    circle3.style.display = 'none';
+        index1.style.display = 'flex';
+        index2.style.display = 'none';
+        circle1.style.display = 'none';
+        circle2.style.display = 'flex';
+        circle3.style.display = 'none';
+        
     
-}
+        
+    }
+    if(img3.classList.contains('active')){
+        
+        img1.style.marginLeft = '-200%';
+        
+        // nav1left
+        nav2left.style.display = 'none';
+        nav3left.style.display = 'none';
+        nav1left.style.display = 'block';
+    
+        // nav2right
+        nav2Right.style.display = 'block';
+        nav1Right.style.display = 'none';
+        nav3Right.style.display = 'none';
+    
+        index1.style.display = 'none';
+        index2.style.display = 'flex';
+        circle1.style.display = 'none';
+        circle2.style.display = 'none';
+        circle3.style.display = 'flex';
+    }
+    if(img1.classList.contains('active')){
+      
+        img1.style.marginLeft = "0";
+    
+        // nav2left
+        nav2left.style.display = 'block';
+        nav1left.style.display = 'none';
+        nav3left.style.display = 'none';
+    
+        // nav3right
+        nav3Right.style.display = 'block';
+        nav2Right.style.display ='none';
+        nav1Right.style.display ='none';
+    
+        index1.style.display = 'flex';
+        index2.style.display = 'none';
+        circle1.style.display = 'flex';
+        circle2.style.display = 'none';
+        circle3.style.display = 'none';
+        
+    }
+    
 
     })
 
@@ -305,6 +332,10 @@ if(img1.classList.contains('active')){
 }
 
 function navleft3(){
+
+    statement[1].classList.remove('active');
+    statement[0].classList.remove('active');
+    statement[2].classList.add('active');
     nav3left.classList.add('carousel-click');
     text.classList.add('click-text');
 
@@ -328,10 +359,211 @@ function navleft3(){
         nav3left.classList.remove('carousel-click'); 
         nav1left.classList.remove('animation-carousel');
     nav2Right.classList.remove('animation-carousel-right');
-        statement[1].classList.remove('active');
-        statement[0].classList.remove('active');
-        statement[2].classList.add('active');
+       
         
+    if(img2.classList.contains('active')){
+        img1.style.marginLeft = '-100%';
+        // nav1right
+        nav2Right.style.display ='none';
+        nav3Right.style.display ='none';
+        nav1Right.style.display = 'block';
+    
+    
+        // nav3left
+        nav1left.style.display = 'none';
+        nav2left.style.display = 'none';
+        nav3left.style.display = 'block';
+    
+        index1.style.display = 'flex';
+        index2.style.display = 'none';
+        circle1.style.display = 'none';
+        circle2.style.display = 'flex';
+        circle3.style.display = 'none';
+        
+    
+        
+    }
+    if(img3.classList.contains('active')){
+        
+        img1.style.marginLeft = '-200%';
+        
+        // nav1left
+        nav2left.style.display = 'none';
+        nav3left.style.display = 'none';
+        nav1left.style.display = 'block';
+    
+        // nav2right
+        nav2Right.style.display = 'block';
+        nav1Right.style.display = 'none';
+        nav3Right.style.display = 'none';
+    
+        index1.style.display = 'none';
+        index2.style.display = 'flex';
+        circle1.style.display = 'none';
+        circle2.style.display = 'none';
+        circle3.style.display = 'flex';
+    }
+    if(img1.classList.contains('active')){
+      
+        img1.style.marginLeft = "0";
+    
+        // nav2left
+        nav2left.style.display = 'block';
+        nav1left.style.display = 'none';
+        nav3left.style.display = 'none';
+    
+        // nav3right
+        nav3Right.style.display = 'block';
+        nav2Right.style.display ='none';
+        nav1Right.style.display ='none';
+    
+        index1.style.display = 'flex';
+        index2.style.display = 'none';
+        circle1.style.display = 'flex';
+        circle2.style.display = 'none';
+        circle3.style.display = 'none';
+        
+    }
+    
+
+    })
+   
+
+ 
+
+}
+
+// nav right side
+
+function navright1(){
+
+    statement[0].classList.add('active');
+    statement[2].classList.remove('active');
+   statement[1].classList.remove('active');
+    text.classList.add('click-text');
+    nav2left.classList.add('animation-carousel');
+    nav3Right.classList.add('animation-carousel-right');
+    
+    nav2left.style.display = 'block';
+    nav1left.style.display = 'none';
+    nav3left.style.display = 'block';
+
+    // nav3right
+    nav3Right.style.display = 'block';
+    nav2Right.style.display ='none';
+    nav1Right.style.display ='block';
+
+    
+
+
+    nav1Right.classList.add('carousel-click');
+        nav1Right.addEventListener('animationend' , function(){
+        text.classList.remove('click-text');
+        nav1Right.classList.remove('carousel-click'); 
+        nav2left.classList.remove('animation-carousel');
+         nav3Right.classList.remove('animation-carousel-right');
+        
+         
+         if(img2.classList.contains('active')){
+            img1.style.marginLeft = '-100%';
+            // nav1right
+            nav2Right.style.display ='none';
+            nav3Right.style.display ='none';
+            nav1Right.style.display = 'block';
+        
+        
+            // nav3left
+            nav1left.style.display = 'none';
+            nav2left.style.display = 'none';
+            nav3left.style.display = 'block';
+        
+            index1.style.display = 'flex';
+            index2.style.display = 'none';
+            circle1.style.display = 'none';
+            circle2.style.display = 'flex';
+            circle3.style.display = 'none';
+            
+        
+            
+        }
+        if(img3.classList.contains('active')){
+            
+            img1.style.marginLeft = '-200%';
+            
+            // nav1left
+            nav2left.style.display = 'none';
+            nav3left.style.display = 'none';
+            nav1left.style.display = 'block';
+        
+            // nav2right
+            nav2Right.style.display = 'block';
+            nav1Right.style.display = 'none';
+            nav3Right.style.display = 'none';
+        
+            index1.style.display = 'none';
+            index2.style.display = 'flex';
+            circle1.style.display = 'none';
+            circle2.style.display = 'none';
+            circle3.style.display = 'flex';
+        }
+        if(img1.classList.contains('active')){
+          
+            img1.style.marginLeft = "0";
+        
+            // nav2left
+            nav2left.style.display = 'block';
+            nav1left.style.display = 'none';
+            nav3left.style.display = 'none';
+        
+            // nav3right
+            nav3Right.style.display = 'block';
+            nav2Right.style.display ='none';
+            nav1Right.style.display ='none';
+        
+            index1.style.display = 'flex';
+            index2.style.display = 'none';
+            circle1.style.display = 'flex';
+            circle2.style.display = 'none';
+            circle3.style.display = 'none';
+            
+        }
+        
+    })
+   
+
+
+
+}
+
+function navright2(){
+
+    statement[2].classList.remove('active');
+    statement[1].classList.add('active');
+   statement[0].classList.remove('active');
+    text.classList.add('click-text');
+    nav3left.classList.add('animation-carousel');
+    nav1Right.classList.add('animation-carousel-right');
+  
+
+       // nav1right
+       nav2Right.style.display ='block';
+       nav3Right.style.display ='none';
+       nav1Right.style.display = 'block';
+   
+   
+       // nav3left
+       nav1left.style.display = 'block';
+       nav2left.style.display = 'none';
+       nav3left.style.display = 'block';
+     
+       
+    nav2Right.classList.add('carousel-click');
+    nav2Right.addEventListener('animationend' , function(){
+        text.classList.remove('click-text');
+        nav2Right.classList.remove('carousel-click'); 
+        nav3left.classList.remove('animation-carousel');
+        nav1Right.classList.remove('animation-carousel-right');
+       
         if(img2.classList.contains('active')){
             img1.style.marginLeft = '-100%';
             // nav1right
@@ -396,160 +628,6 @@ function navleft3(){
             
         }
         
-
-    })
-   
-
- 
-
-}
-
-// nav right side
-
-function navright1(){
-    text.classList.add('click-text');
-    nav2left.classList.add('animation-carousel');
-    nav3Right.classList.add('animation-carousel-right');
-    
-
-    
-
-
-    nav1Right.classList.add('carousel-click');
-        nav1Right.addEventListener('animationend' , function(){
-        text.classList.remove('click-text');
-        nav1Right.classList.remove('carousel-click'); 
-        nav2left.classList.remove('animation-carousel');
-         nav3Right.classList.remove('animation-carousel-right');
-         statement[0].classList.add('active');
-         statement[2].classList.remove('active');
-        statement[1].classList.remove('active');
-         
-        if (img1.classList.contains('active')) {
-            img1.style.marginLeft = "0";
-                
-            // nav2left
-            nav2left.style.display = 'block';
-            nav1left.style.display = 'none';
-            nav3left.style.display = 'none';
-        
-            // nav3right
-            nav3Right.style.display = 'block';
-            nav2Right.style.display ='none';
-            nav1Right.style.display ='none';
-        
-          } else if (img2.classList.contains('active')) {
-            img1.style.marginLeft = '-100%';
-            // nav1right
-            nav2Right.style.display ='none';
-            nav3Right.style.display ='none';
-            nav1Right.style.display = 'block';
-        
-        
-            // nav3left
-            nav1left.style.display = 'none';
-            nav2left.style.display = 'none';
-            nav3left.style.display = 'block';
-          } else {
-          
-            img1.style.marginLeft = '-200%';
-            
-            // nav1left
-            nav2left.style.display = 'none';
-            nav3left.style.display = 'none';
-            nav1left.style.display = 'block';
-        
-            // nav2right
-            nav2Right.style.display = 'block';
-            nav1Right.style.display = 'none';
-            nav3Right.style.display = 'none';
-        
-            index1.style.display = 'none';
-            index2.style.display = 'flex';
-            circle1.style.display = 'none';
-            circle2.style.display = 'none';
-            circle3.style.display = 'flex';
-           
-          }
-    })
-   
-
-
-
-}
-
-function navright2(){
-    text.classList.add('click-text');
-    nav3left.classList.add('animation-carousel');
-    nav1Right.classList.add('animation-carousel-right');
-  
-
-       // nav1right
-       nav2Right.style.display ='block';
-       nav3Right.style.display ='none';
-       nav1Right.style.display = 'block';
-   
-   
-       // nav3left
-       nav1left.style.display = 'block';
-       nav2left.style.display = 'none';
-       nav3left.style.display = 'block';
-     
-       
-    nav2Right.classList.add('carousel-click');
-    nav2Right.addEventListener('animationend' , function(){
-        text.classList.remove('click-text');
-        nav2Right.classList.remove('carousel-click'); 
-        nav3left.classList.remove('animation-carousel');
-        nav1Right.classList.remove('animation-carousel-right');
-        statement[2].classList.remove('active');
-         statement[1].classList.add('active');
-        statement[0].classList.remove('active');
-        if (img1.classList.contains('active')) {
-            img1.style.marginLeft = "0";
-                
-            // nav2left
-            nav2left.style.display = 'block';
-            nav1left.style.display = 'none';
-            nav3left.style.display = 'none';
-        
-            // nav3right
-            nav3Right.style.display = 'block';
-            nav2Right.style.display ='none';
-            nav1Right.style.display ='none';
-        
-          } else if (img2.classList.contains('active')) {
-            img1.style.marginLeft = '-100%';
-            // nav1right
-            nav2Right.style.display ='none';
-            nav3Right.style.display ='none';
-            nav1Right.style.display = 'block';
-        
-        
-            // nav3left
-            nav1left.style.display = 'none';
-            nav2left.style.display = 'none';
-            nav3left.style.display = 'block';
-          } else {
-            img1.style.marginLeft = '-200%';
-            
-            // nav1left
-            nav2left.style.display = 'none';
-            nav3left.style.display = 'none';
-            nav1left.style.display = 'block';
-        
-            // nav2right
-            nav2Right.style.display = 'block';
-            nav1Right.style.display = 'none';
-            nav3Right.style.display = 'none';
-        
-            index1.style.display = 'none';
-            index2.style.display = 'flex';
-            circle1.style.display = 'none';
-            circle2.style.display = 'none';
-            circle3.style.display = 'flex';
-           
-          }
     
     })
      
@@ -558,6 +636,11 @@ function navright2(){
 
 
 function navright3(){
+
+    statement[2].classList.add('active');
+    statement[1].classList.remove('active');
+   statement[0].classList.remove('active');
+
     nav3Right.classList.add('carousel-click');
     text.classList.add('click-text');
     nav1left.classList.add('animation-carousel');
@@ -577,55 +660,70 @@ function navright3(){
         nav1left.classList.remove('animation-carousel');
         text.classList.remove('click-text');
         nav3Right.classList.remove('carousel-click'); 
-        statement[2].classList.add('active');
-        statement[1].classList.remove('active');
-       statement[0].classList.remove('active');
-       if (img1.classList.contains('active')) {
-        img1.style.marginLeft = "0";
+        if(img2.classList.contains('active')){
+            img1.style.marginLeft = '-100%';
+            // nav1right
+            nav2Right.style.display ='none';
+            nav3Right.style.display ='none';
+            nav1Right.style.display = 'block';
+        
+        
+            // nav3left
+            nav1left.style.display = 'none';
+            nav2left.style.display = 'none';
+            nav3left.style.display = 'block';
+        
+            index1.style.display = 'flex';
+            index2.style.display = 'none';
+            circle1.style.display = 'none';
+            circle2.style.display = 'flex';
+            circle3.style.display = 'none';
             
-        // nav2left
-        nav2left.style.display = 'block';
-        nav1left.style.display = 'none';
-        nav3left.style.display = 'none';
-    
-        // nav3right
-        nav3Right.style.display = 'block';
-        nav2Right.style.display ='none';
-        nav1Right.style.display ='none';
-    
-      } else if (img2.classList.contains('active')) {
-        img1.style.marginLeft = '-100%';
-        // nav1right
-        nav2Right.style.display ='none';
-        nav3Right.style.display ='none';
-        nav1Right.style.display = 'block';
-    
-    
-        // nav3left
-        nav1left.style.display = 'none';
-        nav2left.style.display = 'none';
-        nav3left.style.display = 'block';
-      } else {
-      
-        img1.style.marginLeft = '-200%';
+        
             
-        // nav1left
-        nav2left.style.display = 'none';
-        nav3left.style.display = 'none';
-        nav1left.style.display = 'block';
-    
-        // nav2right
-        nav2Right.style.display = 'block';
-        nav1Right.style.display = 'none';
-        nav3Right.style.display = 'none';
-    
-        index1.style.display = 'none';
-        index2.style.display = 'flex';
-        circle1.style.display = 'none';
-        circle2.style.display = 'none';
-        circle3.style.display = 'flex';
-       
-      }
+        }
+        if(img3.classList.contains('active')){
+            
+            img1.style.marginLeft = '-200%';
+            
+            // nav1left
+            nav2left.style.display = 'none';
+            nav3left.style.display = 'none';
+            nav1left.style.display = 'block';
+        
+            // nav2right
+            nav2Right.style.display = 'block';
+            nav1Right.style.display = 'none';
+            nav3Right.style.display = 'none';
+        
+            index1.style.display = 'none';
+            index2.style.display = 'flex';
+            circle1.style.display = 'none';
+            circle2.style.display = 'none';
+            circle3.style.display = 'flex';
+        }
+        if(img1.classList.contains('active')){
+          
+            img1.style.marginLeft = "0";
+        
+            // nav2left
+            nav2left.style.display = 'block';
+            nav1left.style.display = 'none';
+            nav3left.style.display = 'none';
+        
+            // nav3right
+            nav3Right.style.display = 'block';
+            nav2Right.style.display ='none';
+            nav1Right.style.display ='none';
+        
+            index1.style.display = 'flex';
+            index2.style.display = 'none';
+            circle1.style.display = 'flex';
+            circle2.style.display = 'none';
+            circle3.style.display = 'none';
+            
+        }
+        
 });
 
 }
